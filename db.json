@@ -1,0 +1,23 @@
+{
+  "produits": [
+    {
+      "name": "canne",
+      "prix": "12",
+      "quantite": "5",
+      "id": 1,
+      "quantity": "1772"
+    },
+    {
+      "name": "table",
+      "prix": "100",
+      "quantity": "25",
+      "id": 3
+    },
+    {
+      "name": "table",
+      "prix": "17",
+      "quantity": "22",
+      "id": 4
+    }
+  ]
+}

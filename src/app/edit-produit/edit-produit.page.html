@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">editProduit <ion-input [(ngModel)]="prod.name"></ion-input> </ion-title>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="accueil" text="back"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nom : </ion-label>
+    <ion-input [(ngModel)]="prod.name" placeholder="nom du produit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Prix : </ion-label>
+    <ion-input [(ngModel)]="prod.prix" placeholder="prix du produit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>quantite : </ion-label>
+    <ion-input [(ngModel)]="prod.quantity" placeholder="quantite"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="update()" color="success" size="small">
+      Update
+    </ion-button>
+    <ion-button [routerLink]="['/accueil']" color="danger" size="small">
+      Cancel
+    </ion-button>
+  </ion-item>
+</ion-content>

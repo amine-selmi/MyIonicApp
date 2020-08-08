@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar style="text-align: center;">
+    <ion-title>accueil</ion-title>
+    <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home" text="back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Nom : </ion-label>
+    <ion-input [(ngModel)]="prod.name" placeholder="nom du produit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Prix : </ion-label>
+    <ion-input [(ngModel)]="prod.prix" placeholder="prix du produit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>quantite : </ion-label>
+    <ion-input [(ngModel)]="prod.quantity" placeholder="quantite"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="addProd()">Ajouter</ion-button>
+  </ion-item>
+
+
+  <table  style="width: 100%; text-align: center;">
+    <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Quantité</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of prodList">
+        <td>{{ item.name }}</td>
+        <td>{{ item.prix }}</td>
+        <td>{{ item.quantity }}</td>
+
+        <td >
+          <ion-button color="warning" size="small" routerLink='/edit-produit/{{item.id}}'>
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+          <ion-button color="danger" size="small" (click)="OnDelete(item)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</ion-content>

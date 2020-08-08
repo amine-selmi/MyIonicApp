@@ -1,0 +1,9 @@
+{
+    "produits": [
+      { "id":1 , "name": "canne", "prix": 14, "quantity": 2 }
+    ],
+    "comment": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }
